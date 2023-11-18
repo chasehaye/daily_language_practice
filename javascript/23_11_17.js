@@ -2,6 +2,7 @@ const randomArr = [6, 7, 4, 3, 2, 9, 10, 1, 5, 8, 9]
 let factorialnum = 3
 const fibIteration = 4
 const flips = 2
+const singleCharArr = ['a', 'b', 'c']
 
 //max
 function findMax(arr){
@@ -50,20 +51,19 @@ function coinFlips(int){
     // ["HH", "HT", "TH", "TT"]
     // H stands for Heads and T stands for tails
     // Represent the two outcomes of each flip as "H" or "T"
-
-
-    return int <= 0 ? [''] : [...coinFlips(int - 1).map (r => 'H' + r), ...coinFlips(int - 1).map (r => 'T' + r)]
+    return  int <= 0 ? [''] : [...coinFlips(int - 1).map(r => 'H' + r), ...coinFlips(int - 1).map(r => 'T' + r)]
 }
 console.log("coin flip result:")
 console.log(coinFlips(flips))
 
-function letterCombinations(){
+function letterCombinations(arr){
     // This function returns an array of all combinations of the given letters
     // Input type: Array of single characters
     // For example, letterCombinations(["a","b","c"]) would return the following:
     // ["a","b","c","ab","ac","ba","bc","ca","cb","abc","acb","bac","bca","cab","cba"]
+
+    // return to later
 }
 
-
-//
-//
+console.log("comb result:")
+console.log(letterCombinations(singleCharArr))
